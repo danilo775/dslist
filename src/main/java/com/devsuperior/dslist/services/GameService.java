@@ -19,7 +19,7 @@ public class GameService {
 	private GameRepository gameRepository;
 	
 	
-	@Transactional()
+	@Transactional
 	public  List<GameMinDTO> findAll(){
 		
 		return gameRepository.findAll().stream().map(x -> new GameMinDTO(x)).toList();
